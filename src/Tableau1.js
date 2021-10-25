@@ -31,9 +31,11 @@ class Tableau1 extends Phaser.Scene{
         }
 
         //texture au fond  TODO élève : faire une boucle pour charger les 3 images et démontrer par la même que vous savez aller au plus simple
-        this.load.image('bg-animation-a', 'assets/level/background-2/bg-animation/bg-animation-a.png');
+        for(let g=1;g<=3;g++) {
+            this.load.image('bg-animation-'+g, 'assets/level/background-2/bg-animation/bg-animation-'+g+'.png');
+        }
 
-    }
+
 
     /**
      * Crée la scène
@@ -46,7 +48,7 @@ class Tableau1 extends Phaser.Scene{
          * Fond très clair avec une trame
          * @type {Phaser.GameObjects.Sprite}
          */
-        let bgAnimationA=this.add.sprite(0,0, 'bg-animation-a').setOrigin(0,0);
+        let bgAnimationA=this.add.sprite(0,0, 'bg-animation-1').setOrigin(0,0);
 
         //--------------background 2 (tout au fond et flou)--------------------
 

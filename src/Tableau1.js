@@ -6,10 +6,14 @@ class Tableau1 extends Phaser.Scene{
     /**
      * Précharge les assets
      */
-    preload(){
+    preload() {
         //bg 2 (tout au fond et très flou)
         this.load.image('bg2-terrain-2', 'assets/level/background-2/bg2-terrain-2.png');
         this.load.image('bg2-tree-2', 'assets/level/background-2/bg2-tree-2.png');
+        this.load.image('bg2-terrain-1','assets/level/background-2/bg2-terrain-1.png')
+        this.load.image('bg2-tree-3','/assets/level/background-2/bg2-tree-3.png')
+
+
 
         //bg 1 (gris légèrement flou)
         this.load.image('bg1-terrain-3', 'assets/level/background-1/bg-terrain-3.png');
@@ -21,20 +25,20 @@ class Tableau1 extends Phaser.Scene{
 
         //au lieu d'écrire 5 lignes quasi identiques, on charge l'herbe avec une boucle
         // ALGO : ceci est une boucle
-        for(let i=1;i<=5;i++){
-            this.load.image('g-grass-'+i, 'assets/level/ground/g-grass-'+i+'.png');
+        for (let i = 1; i <= 5; i++) {
+            this.load.image('g-grass-' + i, 'assets/level/ground/g-grass-' + i + '.png');
         }
 
         //filtre film TODO élève : faire une boucle à la place des 3 lignes qui suivent
-        for(let a=1;a<=3;a++){
-            this.load.image('filterFilm'+a,'assets/level/filters/film/frame-'+a+'.png');
+        for (let a = 1; a <= 3; a++) {
+            this.load.image('filterFilm' + a, 'assets/level/filters/film/frame-' + a + '.png');
         }
 
         //texture au fond  TODO élève : faire une boucle pour charger les 3 images et démontrer par la même que vous savez aller au plus simple
-        for(let g=1;g<=3;g++) {
-            this.load.image('bg-animation-'+g, 'assets/level/background-2/bg-animation/bg-animation-'+g+'.png');
+        for (let g = 1; g <= 3; g++) {
+            this.load.image('bg-animation-' + g, 'assets/level/background-2/bg-animation/bg-animation-' + g + '.png');
         }
-
+    }
 
 
     /**
@@ -62,8 +66,14 @@ class Tableau1 extends Phaser.Scene{
          * Terrain dans bg2
          * @type {Phaser.GameObjects.Image}
          */
-        let bg2Terrain2=this.add.image(-100,100, 'bg2-terrain-2').setOrigin(0,0);
+        let bg2Terrain2=this.add.image(-100,150, 'bg2-terrain-2').setOrigin(0,0);
         this.bg2Container.add(bg2Terrain2);
+
+        let bg2Terrain1=this.add.image(700,200, 'bg2-terrain-1').setOrigin(0,0);
+        this.bg2Container.add(bg2Terrain1);
+
+        let bg2tree3=this.add.image(800,-50, 'bg2-tree-3').setOrigin(0,0);
+        this.bg2Container.add(bg2tree3);
         /**
          * Arbre dans bg2
          * @type {Phaser.GameObjects.Image}

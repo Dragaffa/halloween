@@ -102,6 +102,7 @@ class Tableau1 extends Phaser.Scene{
          * contient tous les éléments du background 1 (gris)
          * @type {Phaser.GameObjects.Container}
          */
+        this.bg1Container=this.add.container(0,0);
 
         let bg1Terrain3=this.add.image(-425,200, 'bg1-terrain-3').setOrigin(0,0);
         this.bg1Container.add(bg1Terrain3);
@@ -120,6 +121,8 @@ class Tableau1 extends Phaser.Scene{
         let bg1Tree3=this.add.image(150,-80, 'bg1-tree-3').setOrigin(0,0);
         this.bg1Container.add(bg1Tree3);
         bg1Tree3.setScale(0.6)
+
+
         //-------------ground (premier plan noir)---------------------------
 
         /**
@@ -150,7 +153,6 @@ class Tableau1 extends Phaser.Scene{
         //ici on va calculer les positions
         let gMid1=this.add.image(-150,350, 'gMid').setOrigin(0,0);
         this.groundContainer.add(gMid1);
-
         /**
          * Herbe dans l'eau
          * @type {Phaser.GameObjects.TileSprite}
@@ -166,14 +168,12 @@ class Tableau1 extends Phaser.Scene{
         let gGrass9=this.add.image(685,400, 'g-grass-4').setOrigin(0,0);
         gGrass9.setScale(2.5)
         this.groundContainer.add(gGrass9);
-
         /**
          * De l'eau
          * @type {Phaser.GameObjects.TileSprite}
          */
         let gWater=this.add.image(425,385, 'gWater').setOrigin(0,0);
         this.groundContainer.add(gWater);
-
         /**
          * roche
          * @type {Phaser.GameObjects.Image}
@@ -183,7 +183,6 @@ class Tableau1 extends Phaser.Scene{
 
         let gStone4=this.add.image(790,350, 'gStone4').setOrigin(0,0);
         this.groundContainer.add(gStone4);
-
         /**
          * Terrain 2
          * @type {Phaser.GameObjects.Image}
@@ -196,7 +195,6 @@ class Tableau1 extends Phaser.Scene{
          */
         let gMid3=this.add.image(gMid2.x+gMid2.width,350, 'gRight').setOrigin(0,0);
         this.groundContainer.add(gMid3);
-
         /**
          * Terrain 4
          * @type {Phaser.GameObjects.Image}
@@ -225,7 +223,6 @@ class Tableau1 extends Phaser.Scene{
 
         let gGrass6=this.add.image(875,325, 'g-grass-5').setOrigin(0,0);
         this.groundContainer.add(gGrass6);
-
         /**
          * Champignon
          * @type {Phaser.GameObjects.TileSprite}
@@ -233,7 +230,6 @@ class Tableau1 extends Phaser.Scene{
         let gMushroom1=this.add.image(140,268, 'gMushroom1').setOrigin(0,0);
         gMushroom1.angle=10;
         this.groundContainer.add(gMushroom1);
-
         /**
          * pont
          * @type {Phaser.GameObjects.TileSprite}
@@ -241,7 +237,6 @@ class Tableau1 extends Phaser.Scene{
         let gWB=this.add.image(425,300, 'gWB').setOrigin(0,0);
         gWB.setScale(0.8)
         this.groundContainer.add(gWB);
-
         /**
          * Caisse
          * @type {Phaser.GameObjects.TileSprite}
@@ -250,7 +245,6 @@ class Tableau1 extends Phaser.Scene{
         gBox.setScale(0.6)
         gBox.angle=5
         this.groundContainer.add(gBox);
-
         /**
          * tron
          * @type {Phaser.GameObjects.TileSprite}
@@ -261,8 +255,6 @@ class Tableau1 extends Phaser.Scene{
         let gVine2=this.add.tileSprite(600,-3, 20, 250,'gVine').setOrigin(0,0);
         gVine2.setScale(0.5)
         this.groundContainer.add(gVin2);
-
-
         /**
          * filtre type film au premier plan
          * @type {Phaser.GameObjects.Sprite}

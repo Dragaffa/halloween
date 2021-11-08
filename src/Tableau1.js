@@ -21,6 +21,7 @@ class Tableau1 extends Phaser.Scene{
         this.load.image('bg1-tree-3', 'assets/level/background-1/bg-tree-3.png');
         this.load.image('bg1-terrain-1', 'assets/level/background-1/bg-terrain-1.png');
         this.load.image('bg1T4', 'assets/level/background-1/bg-terrain-4.png');
+        this.load.image('pontFlou', 'assets/level/background-1/bg-wooden-bridge.png');
 
         //ground (premier plan noir)
         this.load.image('gMid', 'assets/level/ground/g-mid.png');
@@ -46,6 +47,8 @@ class Tableau1 extends Phaser.Scene{
         this.load.image('gTron1', 'assets/level/ground/g-fellen-tree-1.png');
         this.load.image('gSpike', 'assets/level/ground/g-spike-1.png');
         this.load.image('zombie', 'assets/level/zombie/z1.png');
+
+        this.load.image('zombie1', 'assets/level/zombie/z8.png');
 
         //au lieu d'écrire 5 lignes quasi identiques, on charge l'herbe avec une boucle
         // ALGO : ceci est une boucle
@@ -129,7 +132,7 @@ class Tableau1 extends Phaser.Scene{
         let bg1T4=this.add.image(700,200, 'bg1T4').setOrigin(0,0);
         this.bg1Container.add(bg1T4);
 
-        let bg1T42=this.add.image(1000,200, 'bg1T4').setOrigin(0,0);
+        let bg1T42=this.add.image(1700,200, 'bg1T4').setOrigin(0,0);
         this.bg1Container.add(bg1T42);
 
         let bg1Terrain1=this.add.image(700,300, 'bg1-terrain-1').setOrigin(0,0);
@@ -147,6 +150,22 @@ class Tableau1 extends Phaser.Scene{
         this.bg1Container.add(bg1Tree3);
         bg1Tree3.setScale(0.6)
 
+        let bg1Tree32=this.add.image(1300,-80, 'bg1-tree-3').setOrigin(0,0);
+        this.bg1Container.add(bg1Tree32);
+        bg1Tree3.setScale(0.2)
+
+        let bg1Tree322=this.add.image(1150,-80, 'bg1-tree-1').setOrigin(0,0);
+        this.bg1Container.add(bg1Tree322);
+
+        let bg1Tree3222=this.add.image(2000,-80, 'bg1-tree-1').setOrigin(0,0);
+        this.bg1Container.add(bg1Tree3222);
+
+        let bg1Tree3223=this.add.image(1900,-80, 'bg1-tree-1').setOrigin(0,0);
+        this.bg1Container.add(bg1Tree3223);
+
+
+        let pontFlou=this.add.image(1500,238, 'pontFlou').setOrigin(0,0);
+        this.bg1Container.add(pontFlou);
 
         //-------------ground (premier plan noir)---------------------------
 
@@ -184,6 +203,10 @@ class Tableau1 extends Phaser.Scene{
         let zombie=this.add.image(1710,170, 'zombie').setOrigin(0,0);
         this.groundContainer.add(zombie);
         zombie.angle=3
+
+        let zombie1=this.add.image(320,190, 'zombie1').setOrigin(0,0);
+        this.groundContainer.add(zombie1);
+
         /**
          * tron
          * @type {Phaser.GameObjects.Image}

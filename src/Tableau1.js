@@ -164,7 +164,7 @@ class Tableau1 extends Phaser.Scene{
         this.bg1Container.add(bg1Tree3223);
 
 
-        let pontFlou=this.add.image(1500,238, 'pontFlou').setOrigin(0,0);
+        let pontFlou=this.add.image(1500,-80, 'pontFlou').setOrigin(0,0);
         this.bg1Container.add(pontFlou);
 
         //-------------ground (premier plan noir)---------------------------

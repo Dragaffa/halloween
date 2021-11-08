@@ -146,7 +146,7 @@ class Tableau1 extends Phaser.Scene{
         this.bg1Container.add(bg1Tree1);
         bg1Tree1.setScale(0.7)
 
-        let bg1Tree3=this.add.image(150,-80, 'bg1-tree-3').setOrigin(0,0);
+        let bg1Tree3=this.add.image(3000,100, 'bg1-tree-3').setOrigin(0,0);
         this.bg1Container.add(bg1Tree3);
         bg1Tree3.setScale(0.6)
 

@@ -20,6 +20,7 @@ class Tableau1 extends Phaser.Scene{
         this.load.image('bg1-tree-1', 'assets/level/background-1/bg-tree-1.png');
         this.load.image('bg1-tree-3', 'assets/level/background-1/bg-tree-3.png');
         this.load.image('bg1-terrain-1', 'assets/level/background-1/bg-terrain-1.png');
+        this.load.image('bg1T4', 'assets/level/background-1/bg-terrain-4.png');
 
         //ground (premier plan noir)
         this.load.image('gMid', 'assets/level/ground/g-mid.png');
@@ -92,11 +93,20 @@ class Tableau1 extends Phaser.Scene{
         let bg2Terrain2=this.add.image(-100,150, 'bg2-terrain-2').setOrigin(0,0);
         this.bg2Container.add(bg2Terrain2);
 
-        let bg2Terrain1=this.add.image(700,200, 'bg2-terrain-1').setOrigin(0,0);
+
+
+
+        let bg2Terrain1=this.add.image(1000,100, 'bg2-terrain-1').setOrigin(0,0);
         this.bg2Container.add(bg2Terrain1);
+
+        let bg2Terrain12=this.add.image(1500, 400,'bg2-terrain-1').setOrigin(0,0);
+        this.bg2Container.add(bg2Terrain12);
 
         let bg2tree3=this.add.image(800,-50, 'bg2-tree-3').setOrigin(0,0);
         this.bg2Container.add(bg2tree3);
+
+        let bg2tree32=this.add.image(1900,-50, 'bg2-tree-3').setOrigin(0,0);
+        this.bg2Container.add(bg2tree32);
         /**
          * Arbre dans bg2
          * @type {Phaser.GameObjects.Image}
@@ -115,6 +125,12 @@ class Tableau1 extends Phaser.Scene{
 
         let bg1Terrain3=this.add.image(-425,200, 'bg1-terrain-3').setOrigin(0,0);
         this.bg1Container.add(bg1Terrain3);
+
+        let bg1T4=this.add.image(700,200, 'bg1T4').setOrigin(0,0);
+        this.bg1Container.add(bg1T4);
+
+        let bg1T42=this.add.image(1000,200, 'bg1T4').setOrigin(0,0);
+        this.bg1Container.add(bg1T42);
 
         let bg1Terrain1=this.add.image(700,300, 'bg1-terrain-1').setOrigin(0,0);
         this.bg1Container.add(bg1Terrain1);
@@ -370,8 +386,8 @@ class Tableau1 extends Phaser.Scene{
         //définit à quelles vitesse se déplacent nos différents plans
         bgAnimationA.scrollFactorX=0;
         this.filterFilm.scrollFactorX=0;
-        this.bg2Container.scrollFactorX=0.2;
-        this.bg1Container.scrollFactorX=0.4;
+        this.bg2Container.scrollFactorX=10;
+        this.bg1Container.scrollFactorX=10;
         this.groundContainer.scrollFactorX=10;
     }
     /**

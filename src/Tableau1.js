@@ -37,8 +37,11 @@ class Tableau1 extends Phaser.Scene{
         this.load.image('gBox', 'assets/level/ground/g-box-2.png');
         this.load.image('gVine', 'assets/level/ground/g-vine-a.png');
 
+        this.load.image('gStone5', 'assets/level/ground/g-stone-5.png');
         this.load.image('gRight2', 'assets/level/ground/g-right.png');
-        this.load.image('gRight3', 'assets/level/ground/g-right.png)');
+        this.load.image('gRight3', 'assets/level/ground/g-right.png');
+        this.load.image('grass2', 'assets/level/ground/g-grass-2.png');
+
 
         //au lieu d'écrire 5 lignes quasi identiques, on charge l'herbe avec une boucle
         // ALGO : ceci est une boucle
@@ -141,6 +144,10 @@ class Tableau1 extends Phaser.Scene{
         this.groundContainer.add(tree2);
         tree2.setScale(0.7)
 
+        let tree21=this.add.image(1120,380, 'gTree2').setOrigin(0,1);
+        this.groundContainer.add(tree21);
+        tree21.setScale(0.7)
+
         let tree3=this.add.image(30,375, 'gTree3').setOrigin(0,1);
         this.groundContainer.add(tree3);
         tree3.setScale(0.7)
@@ -153,10 +160,10 @@ class Tableau1 extends Phaser.Scene{
          * Terrain 1
          * @type {Phaser.GameObjects.Image}
          */
-        let gRight3=this.add.image(950,350, 'gMid').setOrigin(0,0);
+        let gRight3=this.add.image(950,368, 'gMid').setOrigin(0,0);
         this.groundContainer.add(gRight3);
 
-        let gRight2=this.add.image(1100,350, 'gRight').setOrigin(0,0);
+        let gRight2=this.add.image(1100,368, 'gRight').setOrigin(0,0);
         this.groundContainer.add(gRight2);
 
         //ici on va calculer les positions
@@ -187,6 +194,17 @@ class Tableau1 extends Phaser.Scene{
          * roche
          * @type {Phaser.GameObjects.Image}
          */
+
+        let gStone51=this.add.image(1060,350, 'gStone5').setOrigin(0,0);
+        this.groundContainer.add(gStone51);
+        gStone51.setScale(2.0)
+
+        let gStone41=this.add.image(950,350, 'gStone4').setOrigin(0,0);
+        this.groundContainer.add(gStone41);
+
+        let gStone42=this.add.image(1050,350, 'gStone4').setOrigin(0,0);
+        this.groundContainer.add(gStone42);
+
         let gStone2=this.add.image(350,335, 'gStone2').setOrigin(0,0);
         this.groundContainer.add(gStone2);
 
@@ -232,6 +250,9 @@ class Tableau1 extends Phaser.Scene{
 
         let gGrass6=this.add.image(875,325, 'g-grass-5').setOrigin(0,0);
         this.groundContainer.add(gGrass6);
+
+        let grass2=this.add.image(1045,325, 'g-grass-5').setOrigin(0,0);
+        this.groundContainer.add(grass2);
         /**
          * Champignon
          * @type {Phaser.GameObjects.TileSprite}

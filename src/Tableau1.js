@@ -37,8 +37,8 @@ class Tableau1 extends Phaser.Scene{
         this.load.image('gBox', 'assets/level/ground/g-box-2.png');
         this.load.image('gVine', 'assets/level/ground/g-vine-a.png');
 
-
         this.load.image('gRight2', 'assets/level/ground/g-right.png');
+        this.load.image('gRight3', 'assets/level/ground/g-right.png)');
 
         //au lieu d'écrire 5 lignes quasi identiques, on charge l'herbe avec une boucle
         // ALGO : ceci est une boucle
@@ -153,9 +153,12 @@ class Tableau1 extends Phaser.Scene{
          * Terrain 1
          * @type {Phaser.GameObjects.Image}
          */
+        let gRight3=this.add.image(950,350, 'gMid').setOrigin(0,0);
+        this.groundContainer.add(gRight3);
 
-        let gRight2=this.add.image(150,350, 'gRight').setOrigin(0,0);
+        let gRight2=this.add.image(1100,350, 'gRight').setOrigin(0,0);
         this.groundContainer.add(gRight2);
+
         //ici on va calculer les positions
         let gMid1=this.add.image(-150,350, 'gMid').setOrigin(0,0);
         this.groundContainer.add(gMid1);
@@ -296,7 +299,7 @@ class Tableau1 extends Phaser.Scene{
         this.filterFilm.scrollFactorX=0;
         this.bg2Container.scrollFactorX=0.2;
         this.bg1Container.scrollFactorX=0.4;
-        this.groundContainer.scrollFactorX=1;
+        this.groundContainer.scrollFactorX=10;
     }
     /**
      * Définit ce qui se passe quand on appuie ou relache une touche du clavier

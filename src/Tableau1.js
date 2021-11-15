@@ -60,10 +60,20 @@ class Tableau1 extends Phaser.Scene{
         for (let a = 1; a <= 3; a++) {
             this.load.image('filterFilm' + a, 'assets/level/filters/film/frame-' + a + '.png');
         }
-
+        for (let a = 1; a <= 3; a++) {
+            this.load.image('filterBlood' + a, 'assets/level/filters/bloody/frame' + a + '.png');
+        }
         //texture au fond  TODO élève : faire une boucle pour charger les 3 images et démontrer par la même que vous savez aller au plus simple
         for (let g = 1; g <= 3; g++) {
             this.load.image('bg-animation-' + g, 'assets/level/background-2/bg-animation/bg-animation-' + g + '.png');
+        }
+        //texture au fond  TODO élève : faire une boucle pour charger les 3 images et démontrer par la même que vous savez aller au plus simple
+        for (let g = 1; g <= 3; g++) {
+            this.load.image('filterRain' + g, 'assets/level/weather/rain/frame' + g + '.png');
+        }
+        //texture au fond  TODO élève : faire une boucle pour charger les 3 images et démontrer par la même que vous savez aller au plus simple
+        for (let g = 1; g <= 5; g++) {
+            this.load.image('filterSnow' + g, 'assets/level/weather/snow/frame' + g + '.png');
         }
     }
 
@@ -394,6 +404,63 @@ class Tableau1 extends Phaser.Scene{
         });
         this.filterFilm.play('film');
 
+        /**
+         * filtre type film au premier plan
+         * @type {Phaser.GameObjects.Sprite}
+         */
+        this.filterSnow = this.add.sprite(0, 0, 'filterSnow1').setOrigin(0,0);
+        //animation de 3 images
+        this.anims.create({
+            key: 'snow',
+            frames: [
+                {key:'filterSnow1'},
+                {key:'filterSnow2'},
+                {key:'filterSnow3'},
+                {key:'filterSnow4'},
+                {key:'filterSnow5'},
+            ],
+            frameRate: 16,
+            repeat: -1
+        });
+        this.filterSnow.play('snow');
+        this.filterSnow.visible=false;
+
+        /**
+         * filtre type film au premier plan
+         * @type {Phaser.GameObjects.Sprite}
+         */
+        this.filterBlood = this.add.sprite(0, 0, 'filterBlood1').setOrigin(0,0);
+        //animation de 3 images
+        this.anims.create({
+            key: 'Blood',
+            frames: [
+                {key:'filterBlood1'},
+                {key:'filterBlood2'},
+                {key:'filterBlood3'},
+            ],
+            frameRate: 16,
+            repeat: -1
+        });
+        this.filterBlood.play('Blood');
+
+        /**
+         * filtre type film au premier plan
+         * @type {Phaser.GameObjects.Sprite}
+         */
+        this.filterRain = this.add.sprite(0, 0, 'filterRain1').setOrigin(0,0);
+        //animation de 3 images
+        this.anims.create({
+            key: 'rain',
+            frames: [
+                {key:'filterRain1'},
+                {key:'filterRain2'},
+                {key:'filterRain3'},
+            ],
+            frameRate: 16,
+            repeat: -1
+        });
+        this.filterRain.play('rain');
+
         //TODO élève faire une animation du même genre que filter mais pour bgAnimationA
 
         //gestion du parallaxe
@@ -409,6 +476,9 @@ class Tableau1 extends Phaser.Scene{
         //définit à quelles vitesse se déplacent nos différents plans
         bgAnimationA.scrollFactorX=0;
         this.filterFilm.scrollFactorX=0;
+        this.filterBlood.scrollFactorX=0;
+        this.filterRain.scrollFactorX=0;
+        this.filterSnow.scrollFactorX=0;
         this.bg2Container.scrollFactorX=10;
         this.bg1Container.scrollFactorX=10;
         this.groundContainer.scrollFactorX=10;
@@ -428,6 +498,18 @@ class Tableau1 extends Phaser.Scene{
                     break;
                 case Phaser.Input.Keyboard.KeyCodes.LEFT:
                     me.speed=-1;
+                    break;
+                case Phaser.Input.Keyboard.KeyCodes.S:
+                    me.filterSnow.visible=false;
+                    me.filterRain.visible=false;
+                    break;
+                case Phaser.Input.Keyboard.KeyCodes.P:
+                    me.filterSnow.visible=false;
+                    me.filterRain.visible=true;
+                    break;
+                case Phaser.Input.Keyboard.KeyCodes.N:
+                    me.filterSnow.visible=true;
+                    me.filterRain.visible=false;
                     break;
             }
         });

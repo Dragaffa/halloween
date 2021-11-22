@@ -7,6 +7,18 @@ class Tableau1 extends Phaser.Scene{
      * Précharge les assets
      */
     preload() {
+        //petit personnage meurt:
+        this.load.image('mort1', 'assets/Characters/boy/boy_style_2/PNG/die/Layer-1.png');
+        this.load.image('mort2', 'assets/Characters/boy/boy_style_2/PNG/die/Layer-2.png');
+        this.load.image('mort3', 'assets/Characters/boy/boy_style_2/PNG/die/Layer-3.png');
+        this.load.image('mort4', 'assets/Characters/boy/boy_style_2/PNG/die/Layer-4.png');
+        this.load.image('mort5', 'assets/Characters/boy/boy_style_2/PNG/die/Layer-5.png');
+        this.load.image('mort6', 'assets/Characters/boy/boy_style_2/PNG/die/Layer-6.png');
+        this.load.image('mort7', 'assets/Characters/boy/boy_style_2/PNG/die/Layer-7.png');
+        this.load.image('mort8', 'assets/Characters/boy/boy_style_2/PNG/die/Layer-8.png');
+        this.load.image('mort9', 'assets/Characters/boy/boy_style_2/PNG/die/Layer-9.png');
+
+
         //bg 2 (tout au fond et très flou)
         this.load.image('bg2-terrain-2', 'assets/level/background-2/bg2-terrain-2.png');
         this.load.image('bg2-tree-2', 'assets/level/background-2/bg2-tree-2.png');
@@ -178,6 +190,10 @@ class Tableau1 extends Phaser.Scene{
         this.bg1Container.add(pontFlou);
 
         //-------------ground (premier plan noir)---------------------------
+
+        /**ptit personnage meurt
+
+
 
         /**
          * contient tous les éléments du premier plan (noir)

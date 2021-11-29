@@ -2,6 +2,7 @@
  * ALGO: ceci est une classe...
  * Vous verrez ça plus tard en détail avec Rémi, pour l'instant on n'a pas trop besoin de savoir à quoi ça sert.
  */
+let timeline;
 class Tableau1 extends Phaser.Scene{
     /**
      * Précharge les assets
@@ -76,14 +77,28 @@ class Tableau1 extends Phaser.Scene{
         for (let g = 1; g <= 5; g++) {
             this.load.image('filterSnow' + g, 'assets/level/weather/snow/frame' + g + '.png');
         }
-        //texture au fond  TODO élève : faire une boucle pour charger les 3 images et démontrer par la même que vous savez aller au plus simple
-        for (let g = 1; g <= 9; g++) {
-            this.load.image('mort' + g, 'assets/characters/boy/boy2/PNG/die/die' + g + '.png');
+        //mort tit bonhomme
+        for (let i = 1; i <= 9; i++) {
+            this.load.image('mort' + i, 'assets/characters/boy/boy2/PNG/die/die' + i + '.png');
         }
-
+        for (let i = 1; i <= 10; i++) {
+            this.load.image('idle'+i, 'assets/characters/boy/boy2/PNG/idle/Layer-' + i + '.png');
+        }
+        for (let i = 1; i <= 8; i++) {
+            this.load.image('enemyrun'+i, 'assets/characters/enemy 1/PNG/run/Layer-' + i + '.png');
+        }
+        for (let i = 1; i <= 6; i++) {
+            this.load.image('enemy2'+i, 'assets/characters/enemy 2/PNG/idle/Layer-' + i + '.png');
+        }
     }
 
-
+    getFrames(prefix,length){
+        let frames=[];
+        for (let i=1;i<=length;i++){
+            frames.push({key: prefix+i});
+        }
+        return frames;
+    }
     /**
      * Crée la scène
      * TODO élèves : reproduire à l'identique assets/level/00-preview-example/sample1.jpg
@@ -395,6 +410,115 @@ class Tableau1 extends Phaser.Scene{
         gVine2.setScale(0.5)
         this.groundContainer.add(gVine2);
 
+
+
+        //ANIMATION
+        this.idle = this.add.sprite(500, 110, 'idle').setOrigin(0,0);
+        console.log(frames)
+        this.anims.create({
+            key: 'idle',
+            frames: this.getFrames("idle",10),
+            frameRate: 12,
+            repeat: -1
+        });
+        this.idle.play('idle');
+
+        this.mort = this.add.sprite(500, 110, 'mort').setOrigin(0,0);
+        console.log(frames)
+        this.anims.create({
+            key: 'mort',
+            frames: this.getFrames("mort",9),
+            frameRate: 12,
+            repeat: -1,
+
+
+        });
+        this.mort.play('mort');
+        this.mort.visible=false;
+
+
+
+
+        this.enemyrun = this.add.sprite(800, 160, 'enemyrun').setOrigin(0,0);
+        console.log(frames)
+        this.anims.create({
+            key: 'enemyrun',
+            frames: this.getFrames("enemyrun",8),
+            frameRate: 12,
+            repeat: -1
+        });
+        this.enemyrun.flipX = true;
+        this.enemyrun.play('enemyrun');
+        this.enemyrun.setScale(0.5);
+        this.tweens.add({
+            targets: this.enemyrun,
+            x: 1000,
+            duration: 1000,
+            ease: 'Circular.InOut',
+            yoyo: true,
+            flipX : true,
+            delay: 1000,
+            repeat: -1,
+        });
+
+
+        this.enemy2 = this.add.sprite(180, 50, 'enemy2').setOrigin(0,0);
+        console.log(frames)
+        this.anims.create({
+            key: 'enemy2',
+            frames: this.getFrames("enemy2",6),
+            frameRate: 12,
+            repeat: -1
+
+
+
+        });
+        this.enemy2.play('enemy2');
+        this.enemy2.setScale(0.2);
+
+
+        timeline = this.tweens.timeline({
+
+            targets: this.enemy2,
+            loop: 50,
+
+            tweens: [
+                {
+                    x: 60,
+                    ease: 'Sine.easeInOut',
+                    duration: 2000,
+                    yoyo: true
+                },
+                {
+                    y: 10,
+                    ease: 'Sine.easeOut',
+                    duration: 1000,
+                    offset: 0
+                },
+                {
+                    y: 30,
+                    ease: 'Sine.easeIn',
+                    duration: 1000
+                },
+                {
+                    y: 50,
+                    ease: 'Sine.easeOut',
+                    duration: 1000
+                },
+                {
+                    y: 30,
+                    ease: 'Sine.easeIn',
+                    duration: 1000
+                }
+            ]
+
+        });
+
+        console.log(timeline);
+
+
+
+
         /**
          * filtre type film au premier plan
          * @type {Phaser.GameObjects.Sprite}
@@ -416,7 +540,7 @@ class Tableau1 extends Phaser.Scene{
 
         /** mort petit bonhomme
         */
-         this.mort = this.add.sprite(0, 0, 'mort1').setOrigin(0,0);
+         this.mort = this.add.sprite(0, 0, 'mort').setOrigin(0,0);
          this.anims.create({
             key: 'mort',
             frames: [
@@ -431,7 +555,7 @@ class Tableau1 extends Phaser.Scene{
                 {key:'mort9'},
 
             ],
-            frameRate: 16,
+            frameRate: 9,
             repeat: -1
         });
          this.mort.play('mort');
@@ -518,6 +642,9 @@ class Tableau1 extends Phaser.Scene{
         this.bg2Container.scrollFactorX=10;
         this.bg1Container.scrollFactorX=10;
         this.groundContainer.scrollFactorX=10;
+        this.idle.scrollFactorX=10;
+        this.enemyrun.scrollFactorX=10;
+        this.enemy2.scrollFactorX=10;
     }
     /**
      * Définit ce qui se passe quand on appuie ou relache une touche du clavier
@@ -547,7 +674,7 @@ class Tableau1 extends Phaser.Scene{
                         me.filterRain.visible = false;
                         break;
                     case Phaser.Input.Keyboard.KeyCodes.d:
-                        me.mort.visible = true
+                        me.mort.visible = true;
                         break;
                 }
             });

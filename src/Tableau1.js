@@ -7,17 +7,6 @@ class Tableau1 extends Phaser.Scene{
      * Précharge les assets
      */
     preload() {
-        //petit personnage meurt:
-        this.load.image('mort1', 'assets/Characters/boy/boy_style_2/PNG/die/Layer-1.png');
-        this.load.image('mort2', 'assets/Characters/boy/boy_style_2/PNG/die/Layer-2.png');
-        this.load.image('mort3', 'assets/Characters/boy/boy_style_2/PNG/die/Layer-3.png');
-        this.load.image('mort4', 'assets/Characters/boy/boy_style_2/PNG/die/Layer-4.png');
-        this.load.image('mort5', 'assets/Characters/boy/boy_style_2/PNG/die/Layer-5.png');
-        this.load.image('mort6', 'assets/Characters/boy/boy_style_2/PNG/die/Layer-6.png');
-        this.load.image('mort7', 'assets/Characters/boy/boy_style_2/PNG/die/Layer-7.png');
-        this.load.image('mort8', 'assets/Characters/boy/boy_style_2/PNG/die/Layer-8.png');
-        this.load.image('mort9', 'assets/Characters/boy/boy_style_2/PNG/die/Layer-9.png');
-
 
         //bg 2 (tout au fond et très flou)
         this.load.image('bg2-terrain-2', 'assets/level/background-2/bg2-terrain-2.png');
@@ -87,6 +76,11 @@ class Tableau1 extends Phaser.Scene{
         for (let g = 1; g <= 5; g++) {
             this.load.image('filterSnow' + g, 'assets/level/weather/snow/frame' + g + '.png');
         }
+        //texture au fond  TODO élève : faire une boucle pour charger les 3 images et démontrer par la même que vous savez aller au plus simple
+        for (let g = 1; g <= 9; g++) {
+            this.load.image('mort' + g, 'assets/characters/boy/boy2/PNG/die/die' + g + '.png');
+        }
+
     }
 
 
@@ -413,12 +407,38 @@ class Tableau1 extends Phaser.Scene{
                 {key:'filterFilm1'},
                 {key:'filterFilm2'},
                 {key:'filterFilm3'},
-                {key:''},
+
             ],
             frameRate: 16,
             repeat: -1
         });
         this.filterFilm.play('film');
+
+        /** mort petit bonhomme
+        */
+         this.mort = this.add.sprite(0, 0, 'mort1').setOrigin(0,0);
+         this.anims.create({
+            key: 'mort',
+            frames: [
+                {key:'mort1'},
+                {key:'mort2'},
+                {key:'mort3'},
+                {key:'mort4'},
+                {key:'mort5'},
+                {key:'mort6'},
+                {key:'mort7'},
+                {key:'mort8'},
+                {key:'mort9'},
+
+            ],
+            frameRate: 16,
+            repeat: -1
+        });
+         this.mort.play('mort');
+         this.mort.visible=false;
+
+
+
 
         /**
          * filtre type film au premier plan
@@ -503,42 +523,42 @@ class Tableau1 extends Phaser.Scene{
      * Définit ce qui se passe quand on appuie ou relache une touche du clavier
      * ALGO : ceci est une fonction ou méthode
      */
-    initKeyboard(){
-        let me=this;
-        this.input.keyboard.on('keydown', function(kevent)
+    initKeyboard()
         {
-            switch (kevent.keyCode)
-            {
-                case Phaser.Input.Keyboard.KeyCodes.RIGHT:
-                    me.speed=1;
-                    break;
-                case Phaser.Input.Keyboard.KeyCodes.LEFT:
-                    me.speed=-1;
-                    break;
-                case Phaser.Input.Keyboard.KeyCodes.S:
-                    me.filterSnow.visible=false;
-                    me.filterRain.visible=false;
-                    break;
-                case Phaser.Input.Keyboard.KeyCodes.P:
-                    me.filterSnow.visible=false;
-                    me.filterRain.visible=true;
-                    break;
-                case Phaser.Input.Keyboard.KeyCodes.N:
-                    me.filterSnow.visible=true;
-                    me.filterRain.visible=false;
-                    break;
-            }
-        });
-        this.input.keyboard.on('keyup', function(kevent)
-        {
-            switch (kevent.keyCode)
-            {
-                case Phaser.Input.Keyboard.KeyCodes.RIGHT:
-                case Phaser.Input.Keyboard.KeyCodes.LEFT:
-                    me.speed=0;
-                    break;
-            }
-        });
+            let me = this;
+            this.input.keyboard.on('keydown', function (kevent) {
+                switch (kevent.keyCode) {
+                    case Phaser.Input.Keyboard.KeyCodes.RIGHT:
+                        me.speed = 1;
+                        break;
+                    case Phaser.Input.Keyboard.KeyCodes.LEFT:
+                        me.speed = -1;
+                        break;
+                    case Phaser.Input.Keyboard.KeyCodes.S:
+                        me.filterSnow.visible = false;
+                        me.filterRain.visible = false;
+                        break;
+                    case Phaser.Input.Keyboard.KeyCodes.P:
+                        me.filterSnow.visible = false;
+                        me.filterRain.visible = true;
+                        break;
+                    case Phaser.Input.Keyboard.KeyCodes.N:
+                        me.filterSnow.visible = true;
+                        me.filterRain.visible = false;
+                        break;
+                    case Phaser.Input.Keyboard.KeyCodes.d:
+                        me.mort.visible = true
+                        break;
+                }
+            });
+            this.input.keyboard.on('keyup', function (kevent) {
+                switch (kevent.keyCode) {
+                    case Phaser.Input.Keyboard.KeyCodes.RIGHT:
+                    case Phaser.Input.Keyboard.KeyCodes.LEFT:
+                        me.speed = 0;
+                        break;
+                }
+            });
     }
 
     /**

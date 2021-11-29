@@ -2,7 +2,108 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d3dabbf-a9de-4747-aade-169a491455aa" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/climb_rope/Layer-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/climb_rope/Layer-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/climb_rope/Layer-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/climb_rope/Layer-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/climb_rope/Layer-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/climb_rope/Layer-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/climb_rope/Layer-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/die/Layer-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/die/Layer-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/die/Layer-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/die/Layer-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/die/Layer-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/die/Layer-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/die/Layer-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/die/Layer-8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/die/Layer-9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/fall/Layer-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/fall/Layer-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/fall/Layer-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/fall/Layer-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/fall/Layer-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle/Layer-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle/Layer-10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle/Layer-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle/Layer-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle/Layer-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle/Layer-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle/Layer-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle/Layer-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle/Layer-8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle/Layer-9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle2/Layer-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle2/Layer-10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle2/Layer-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle2/Layer-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle2/Layer-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle2/Layer-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle2/Layer-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle2/Layer-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle2/Layer-8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/idle2/Layer-9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/jump/Layer-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/jump/Layer-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/jump/Layer-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/jump/Layer-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/jump/Layer-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/pull/Layer-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/pull/Layer-10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/pull/Layer-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/pull/Layer-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/pull/Layer-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/pull/Layer-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/pull/Layer-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/pull/Layer-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/pull/Layer-8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/pull/Layer-9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/push/Layer-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/push/Layer-10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/push/Layer-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/push/Layer-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/push/Layer-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/push/Layer-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/push/Layer-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/push/Layer-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/push/Layer-8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/push/Layer-9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/run/Layer-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/run/Layer-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/run/Layer-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/run/Layer-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/run/Layer-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/run/Layer-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/run/Layer-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/run/Layer-8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/shoot/Layer-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/shoot/Layer-10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/shoot/Layer-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/shoot/Layer-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/shoot/Layer-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/shoot/Layer-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/shoot/Layer-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/shoot/Layer-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/shoot/Layer-8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/shoot/Layer-9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/slide/Layer-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/slide/Layer-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/slide/Layer-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/slide/Layer-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/slide/Layer-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/stone.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/walk/Layer-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/walk/Layer-10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/walk/Layer-2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/walk/Layer-3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/walk/Layer-4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/walk/Layer-5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/walk/Layer-6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/walk/Layer-7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/walk/Layer-8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/Characters/boy/boy_style_2/PNG/walk/Layer-9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tableau1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tableau1.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +139,10 @@
       <workItem from="1636373237248" duration="10386000" />
       <workItem from="1636980711468" duration="51000" />
       <workItem from="1636982165813" duration="3133000" />
-      <workItem from="1637584188622" duration="752000" />
+      <workItem from="1637584188622" duration="3927000" />
+      <workItem from="1637588222606" duration="695000" />
+      <workItem from="1637588978771" duration="3305000" />
+      <workItem from="1638187662176" duration="457000" />
     </task>
     <servers />
   </component>
